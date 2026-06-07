@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="logo">SM</span>
+      <span>Student Marketplace</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#browse">Browse</a>
+      <a href="#sell">Sell</a>
+      <a href="#how">How it works</a>
+      <a href="#impact">Impact</a>
+    </nav>
+
+    <div class="actions">
+      <button class="btn-ghost" id="adminOpen">Admin</button>
+      <button class="btn" id="loginOpen">Student Login</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <p class="eyebrow">Verified campus-only marketplace</p>
+        <h1>Buy and sell academic items with trusted students.</h1>
+        <p>A safe web platform for textbooks, gadgets, lab tools, stationery, and other campus accessories.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#browse">Browse Listings</a>
+          <a class="btn-light" href="#sell">Post an Item</a>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="mini-search">Search textbooks, calculator, lab coat...</div>
+        <div class="mini-card">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80" alt="Textbooks">
+          <div><strong>Discrete Math Textbook</strong><p>BDT 420 · Like new</p></div>
+        </div>
+        <div class="mini-card">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Laptop">
+          <div><strong>Scientific Calculator</strong><p>BDT 850 · Verified seller</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div><strong>40-60%</strong><span>student savings</span></div>
+      <div><strong>0%</strong><span>transaction fees</span></div>
+      <div><strong>5</strong><span>academic categories</span></div>
+      <div><strong>100%</strong><span>campus focused</span></div>
+    </div>
+
+    <section id="browse">
+      <div class="section-head">
+        <p class="eyebrow">Marketplace</p>
+        <h2>Browse available items</h2>
+      </div>
+
+      <div class="controls">
+        <label><span>Search</span><input id="searchInput" type="search" placeholder="Textbook, gadget, stationery..."></label>
+        <label><span>Category</span>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+            <option>Textbooks</option>
+            <option>Electronics</option>
+            <option>Stationery</option>
+            <option>Lab Equipment</option>
+            <option>Others</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid" id="listingGrid"></div>
+    </section>
+
+    <section class="split" id="sell">
+      <div>
+        <p class="eyebrow">Sell safely</p>
+        <h2>Post a campus listing</h2>
+        <p class="muted">Add a used academic item with price, condition, category, and seller email. New listings appear instantly on this page.</p>
+      </div>
+
+      <form class="form" id="listingForm">
+        <div class="row">
+          <label><span>Item title</span><input id="itemTitle" required placeholder="Data Structures Book"></label>
+          <label><span>Price BDT</span><input id="itemPrice" required type="number" min="1" placeholder="500"></label>
+        </div>
+
+        <div class="row">
+          <label><span>Category</span>
+            <select id="itemCategory" required>
+              <option value="">Choose category</option>
+              <option>Textbooks</option>
+              <option>Electronics</option>
+              <option>Stationery</option>
+              <option>Lab Equipment</option>
+              <option>Others</option>
+            </select>
+          </label>
+
+          <label><span>Condition</span>
+            <select id="itemCondition" required>
+              <option>Like new</option>
+              <option>Good</option>
+              <option>Fair</option>
+            </select>
+          </label>
+        </div>
+
+        <label><span>Description</span><textarea id="itemDescription" required placeholder="Write short details about the item"></textarea></label>
+        <label><span>Seller email</span><input id="sellerEmail" required type="email" placeholder="student@vu.edu.bd"></label>
+        <button class="btn" type="submit">Publish Listing</button>
+        <p class="status" id="formStatus"></p>
+      </form>
+    </section>
+
+    <section id="how">
+      <div class="section-head">
+        <p class="eyebrow">Process</p>
+        <h2>How the platform works</h2>
+      </div>
+
+      <div class="steps">
+        <article><b>1</b><h3>Verify Student</h3><p>Students register with institutional email credentials for trusted access.</p></article>
+        <article><b>2</b><h3>List Products</h3><p>Sellers post academic items with price, category, and condition.</p></article>
+        <article><b>3</b><h3>Search Items</h3><p>Buyers filter listings by category and keyword for quick discovery.</p></article>
+        <article><b>4</b><h3>Contact Safely</h3><p>Buyers send messages through the marketplace contact system.</p></article>
+      </div>
+    </section>
+
+    <section class="impact-section" id="impact">
+      <div>
+        <p class="eyebrow">Societal impact</p>
+        <h2>Affordable, trusted, and sustainable campus trading.</h2>
+      </div>
+
+      <div class="impact">
+        <article><h3>Financial Relief</h3><p>Students can buy second-hand academic resources at reduced prices.</p></article>
+        <article><h3>Trusted Community</h3><p>Verified student access supports safer peer-to-peer exchanges.</p></article>
+        <article><h3>Green Computing</h3><p>Reuse reduces paper waste, e-waste, and unnecessary new purchases.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Marketplace · Varendra University CSE Project</p>
+    <p>HTML · CSS · JavaScript</p>
+  </footer>
+
+  <dialog id="loginModal">
+    <form method="dialog" class="modal-box">
+      <button class="close">×</button>
+      <h2>Student Login</h2>
+      <p class="muted">Use a university email address to simulate verified access.</p>
+      <label><span>Email</span><input id="loginEmail" type="email" placeholder="name@vu.edu.bd"></label>
+      <label><span>Password</span><input type="password" placeholder="Password"></label>
+      <button class="btn" id="loginBtn" type="button">Login</button>
+      <p class="status" id="loginStatus"></p>
+    </form>
+  </dialog>
+
+  <dialog id="contactModal">
+    <form method="dialog" class="modal-box">
+      <button class="close">×</button>
+      <h2>Contact Seller</h2>
+      <p class="muted" id="contactItem"></p>
+      <label><span>Your message</span><textarea id="messageBody">Hello, is this item still available?</textarea></label>
+      <button class="btn" id="sendMessage" type="button">Send Message</button>
+      <p class="status" id="messageStatus"></p>
+    </form>
+  </dialog>
+
+  <dialog id="adminModal">
+    <form method="dialog" class="modal-box">
+      <button class="close">×</button>
+      <h2>Admin Panel</h2>
+      <p class="muted">Moderation overview for users, listings, and messages.</p>
+      <div class="admin-grid">
+        <div><strong id="totalListings">0</strong><span>Total listings</span></div>
+        <div><strong>12</strong><span>Verified users</span></div>
+        <div><strong>3</strong><span>Open reports</span></div>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
